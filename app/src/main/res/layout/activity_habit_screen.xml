@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".HabitScreen">
+
+    <FrameLayout
+        android:id="@+id/daycontainer"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:background="@drawable/logo_container"
+        android:backgroundTint="@color/mind1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/todayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:fontFamily="@font/poppinsbold"
+            android:text="@string/currentDay"
+            android:textSize="24sp"
+            android:translationY="-28dp" />
+    </FrameLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/daysScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="5dp"
+        android:paddingTop="20dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_daycontainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+
+    <ScrollView
+        android:id="@+id/task_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="280dp"
+        app:layout_constraintTop_toBottomOf="@+id/tips_topic">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/tipsScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/tips_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                    <FrameLayout
+                        android:id="@+id/tip1"
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/barchart_container"
+                        android:clipToOutline="true">
+
+                        <ImageView
+                            android:id="@+id/tip1_image"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:translationX="140dp"
+                            android:translationY="25dp"
+                            app:srcCompat="@drawable/hydration_bg" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="304dp"
+                            android:layout_height="196dp">
+
+                            <TextView
+                                android:id="@+id/tip1_topic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/poppinsbold"
+                                android:text="@string/tip1_topic"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tip1_text"
+                                android:layout_width="120dp"
+                                android:layout_height="146dp"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:lineHeight="50px"
+                                android:text="@string/tip1_text"
+                                android:textSize="14sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tip1_topic" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/tip2"
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/barchart_container">
+
+                        <ImageView
+                            android:id="@+id/tip2_image"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:translationX="130dp"
+                            android:translationY="25dp"
+                            app:srcCompat="@drawable/workout_bg" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tip2_topic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/poppinsbold"
+                                android:text="@string/tip2_topic"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tip2_text"
+                                android:layout_width="130dp"
+                                android:layout_height="150dp"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:lineHeight="50px"
+                                android:text="@string/tip2_text"
+                                android:textSize="14sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tip2_topic" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/tip3"
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/barchart_container">
+
+                        <ImageView
+                            android:id="@+id/tip3_image"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:translationX="140dp"
+                            android:translationY="25dp"
+                            app:srcCompat="@drawable/meditation_bg" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tip3_topic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/poppinsbold"
+                                android:text="@string/tip3_topic"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tip3_text"
+                                android:layout_width="130dp"
+                                android:layout_height="150dp"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:lineHeight="50px"
+                                android:text="@string/tip3_text"
+                                android:textSize="14sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tip3_topic" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/habit_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="100dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/navbar_layout" />
+
+    <TextView
+        android:id="@+id/tips_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:alpha="1"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/tips_topic"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daycontainer" />
+
+    <ImageView
+        android:id="@+id/addHabit_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/newhabit_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

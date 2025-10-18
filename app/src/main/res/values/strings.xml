@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Home screen -->
+    <string name="app_name">Pulse</string>
+    <string name="habbitcount_label">Habit Count</string>
+    <string name="mentalhealth_label">Mind Space</string>
+    <string name="mind1text">Mood\nCheck-in</string>
+    <string name="mind2text">Mood Log</string>
+    <string name="mind3text">Breathing\nExercise</string>
+    <string name="homeTopic3">Refresh Zone</string>
+
+    <!--Habit Page -->
+    <string name="currentDay">Today</string>
+    <string name="tips_topic">Little Reminders 💡</string>
+    <string name="tip1_topic">Hydration</string>
+    <string name="tip1_text">Start your day with a glass of water — it helps wake up your body and kickstart your metabolism</string>
+    <string name="tip2_topic">Stay Active</string>
+    <string name="tip2_text">Just 10 minutes of movement can boost your energy and mood.</string>
+    <string name="tip3_topic">Mindful Moments</string>
+    <string name="tip3_text">Take 5 minutes to breathe and clear your mind—it refreshes your day</string>
+    <string name="newTask">New Habit</string>
+    <string name="habit_description">Add a little detail…</string>
+    <string name="date_label">Date</string>
+    <string name="notification_label">Reminder</string>
+
+    <!-- Mood page -->
+    <string name="moodTopic">How are you feeling?</string>
+    <string name="mood1_text">Awesome!</string>
+    <string name="mood2_text">Good</string>
+    <string name="mood3_text">Fine</string>
+    <string name="mood4_text">Bad</string>
+    <string name="mood5_text">Terrible</string>
+    <string name="saveMoodBtn">Save</string>
+    <string name="MoodHistoryText">Mood Log</string>
+
+    <!-- Hydration Page -->
+    <string name="hydrationTopic">Refresh\nZone</string>
+    <string name="bottle1Text">100 ml</string>
+    <string name="bottle2_text">250 ml</string>
+    <string name="bottle3_text">450 ml</string>
+    <string name="bottle4_text">500 ml</string>
+</resources>

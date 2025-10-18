@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".HomeScreen">
+
+    <ScrollView
+        android:id="@+id/homeScreenScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/LogoConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <View
+                android:id="@+id/logocontainer"
+                android:layout_width="800dp"
+                android:layout_height="1500px"
+                android:layout_marginTop="-250dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="@color/accentColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logoicon"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/applogo" />
+
+            <ImageView
+                android:id="@+id/todoicon"
+                android:layout_width="75px"
+                android:layout_height="75px"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:alpha="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logocontainer"
+                app:srcCompat="@drawable/todoicon_card" />
+
+
+            <TextView
+                android:id="@+id/homeTopic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="36dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/poppinsbold"
+                android:text="@string/habbitcount_label"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/todoicon"
+                app:layout_constraintTop_toBottomOf="@+id/logocontainer" />
+
+            <FrameLayout
+                android:id="@+id/barchartcontainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/barchart_container"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeTopic1">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/homeTopic1" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/meditateicon"
+                android:layout_width="75px"
+                android:layout_height="75px"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:alpha="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barchartcontainer"
+                app:srcCompat="@drawable/meditateicon" />
+
+
+            <TextView
+                android:id="@+id/homeTopic2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="26dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/poppinsbold"
+                android:text="@string/mentalhealth_label"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/meditateicon"
+                app:layout_constraintTop_toBottomOf="@+id/barchartcontainer" />
+
+            <FrameLayout
+                android:id="@+id/mentalhealth_container"
+                android:layout_width="0dp"
+                android:layout_height="480px"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/barchart_container"
+                android:paddingBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeTopic2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/mentalhealth_container"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/mentalhealth_container"
+                app:layout_constraintTop_toTopOf="@+id/mentalhealth_container">
+
+
+                <FrameLayout
+                    android:id="@+id/mind1"
+                    android:layout_width="110dp"
+                    android:layout_height="135dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/barchart_container"
+                    android:backgroundTint="@color/mind1"
+                    android:clipToOutline="true">
+
+
+                    <ImageView
+                        android:id="@+id/abstract1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:elevation="4dp"
+                        android:translationX="20dp"
+                        android:translationY="-25dp"
+                        app:srcCompat="@drawable/abstract1" />
+
+
+                    <TextView
+                        android:id="@+id/mind1text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.8"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/mind1text" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/mind2"
+                    android:layout_width="110dp"
+                    android:layout_height="135dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/barchart_container"
+                    android:backgroundTint="@color/mind2"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:elevation="4dp"
+                        android:translationX="20dp"
+                        android:translationY="-25dp"
+                        app:srcCompat="@drawable/abstract2" />
+
+                    <TextView
+                        android:id="@+id/mind2text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.8"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/mind2text" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/mind3"
+                    android:layout_width="110dp"
+                    android:layout_height="135dp"
+                    android:background="@drawable/barchart_container"
+                    android:backgroundTint="@color/mind3"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top|end"
+                        android:elevation="-1dp"
+                        android:scaleType="centerCrop"
+                        android:translationX="25dp"
+                        android:translationY="-35dp"
+                        app:srcCompat="@drawable/abstract3" />
+
+                    <TextView
+                        android:id="@+id/mind3text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.8"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/mind3text" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/hydrationicon"
+                android:layout_width="75px"
+                android:layout_height="75px"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:alpha="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mentalhealth_container"
+                app:srcCompat="@drawable/hydrationicon_card" />
+
+            <TextView
+                android:id="@+id/homeTopic3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="@string/homeTopic3"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/hydrationicon"
+                app:layout_constraintTop_toBottomOf="@+id/mentalhealth_container" />
+
+            <FrameLayout
+                android:id="@+id/hydration_container"
+                android:layout_width="0dp"
+                android:layout_height="390px"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/barchart_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeTopic3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/hydration_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="590"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hydration_slash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="25dp"
+                        android:alpha="0.9"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="/"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/hydration_complete"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hydration_target"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="25dp"
+                        android:alpha="0.9"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="0"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/hydration_slash"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hydration_scale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="28dp"
+                        android:alpha="0.9"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="ml"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/hydration_target"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/hydration_widget"
+                        android:layout_width="250px"
+                        android:layout_height="90px"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/hydration_add_btn"
+                        android:clickable="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/hydration_slash">
+
+                        <ImageView
+                            android:id="@+id/addWaterBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/addicon2" />
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/watercup_image"
+                        android:layout_width="104dp"
+                        android:layout_height="115dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/watercup" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hydration_container" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include layout="@layout/navbar_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="accentColor">#0B5648</color>
+    <color name = "primaryColor">#F0EBE8</color>
+    <color name = "secondaryColor">#8CDB66</color>"
+
+    <color name="mind1">#D9E9CF</color>
+    <color name="mind2">#EABDE6</color>
+    <color name="mind3">#F7CAC9</color>
+
+    <color name = "hydraBtnColor">#90caf9</color>
+
+
+</resources>
